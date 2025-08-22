@@ -1,0 +1,31 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: ADICIONAR SUV
+    Crie os seguintes arrays:
+     let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    Pergunte ao usuário qual carro deseja ADICIONAR na lista.
+    Apresente a lista antiga de SUVs e a nova lista, após a adição do veículo solicitado.
+    */
+
+    //ENTRADA
+
+     let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carroAdicionar = prompt("Qual carro você deseja adicionar na lista? (Tiggo, Sportage, Tucson, EcoSport)");
+
+
+    //PROCESSAMENTO
+
+    let splice = carrosSUV.indexOf(carroAdicionar);
+    if (splice === -1) {
+        carrosSUV.push(carroAdicionar);
+    } else {
+        alert("Carro já está na lista.");
+    }
+
+    //SAÍDA
+
+    document.write("Lista antiga de SUVs: Tiggo, Sportage, Tucson, EcoSport.<br>");
+    document.write("Nova lista de SUVs: " + carrosSUV.join(", ") + ".");
+
+</script>

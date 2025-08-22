@@ -1,0 +1,44 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: LOJA DE VEÍCULOS
+    Crie os seguintes arrays:
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+    
+    Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
+
+    Apresente a lista final de cada tipo de veículo.
+    */
+
+    //ENTRADA
+
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+    let tipoVeiculo = prompt("Qual tipo de veículo você deseja adicionar? (SUV, Sedan, Hatch)");
+    let novoVeiculo = prompt("Digite o nome do veícuulo que deseja adicionar:");
+
+
+    //PROCESSAMENTO
+
+    if (tipoVeiculo.toLowerCase() === "suv") {
+        carrosSUV.push(novoVeiculo);
+    } else if (tipoVeiculo.toLowerCase() === "sedan") {
+        carrosSedan.push(novoVeiculo);
+    } else if (tipoVeiculo.toLowerCase() === "hatch") {
+        carrosHatch.push(novoVeiculo);
+    } else {
+        alert("Tipo de veículo inválido. Por favor, escolha entre SUV, Sedan ou Hatch.");
+    }
+
+
+    //SAÍDA
+
+    document.write("Lista de SUVs: " + carrosSUV.join(", ") + ".<br>");
+    document.write("Lista de Sedans: " + carrosSedan.join(", ") + ".<br>");
+    document.write("Lista de Hatchs: " + carrosHatch.join(", ") + ".<br>");
+    document.write("Lista completa de veículos: " + carrosSUV.concat(carrosSedan, carrosHatch).join(", ") + ".");
+
+</script>
